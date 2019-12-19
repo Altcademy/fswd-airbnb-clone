@@ -48,6 +48,7 @@ GEM
       io-like (~> 0.3.0)
     arel (9.0.0)
     awesome_print (1.8.0)
+    bcrypt (3.1.13)
     bindex (0.7.0)
     bootsnap (1.4.4)
       msgpack (~> 1.0)
@@ -124,7 +125,7 @@ GEM
       pry (>= 0.10.4)
     public_suffix (3.1.0)
     puma (3.12.1)
-    rack (2.0.7)
+    rack (2.0.8)
     rack-proxy (0.6.5)
       rack
     rack-test (1.1.0)
@@ -231,6 +232,7 @@ PLATFORMS
 
 DEPENDENCIES
   awesome_print
+  bcrypt (~> 3.1.7)
   bootsnap (>= 1.1.0)
   byebug
   capybara (>= 2.15)
