@@ -28,6 +28,7 @@ class Home extends React.Component {
   }
 
   render () {
+    console.log("Hello world");
     const { properties, next_page, loading } = this.state;
     return (
       <Layout>

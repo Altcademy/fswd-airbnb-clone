@@ -31,7 +31,7 @@ class Login extends React.Component {
 
   render () {
     const { authenticated, show_login } = this.state;
-    if (authenticated) {
+    /*if (authenticated) {
       return (
         <Layout>
           <div className="container">
@@ -45,9 +45,9 @@ class Login extends React.Component {
           </div>
         </Layout>
       );
-    };
+    }*/
 
-    return (
+    /*return (
       <Layout>
         <div className="container">
           <div className="row">
@@ -59,7 +59,7 @@ class Login extends React.Component {
           </div>
         </div>
       </Layout>
-    )
+    );*/
   }
 }
 
