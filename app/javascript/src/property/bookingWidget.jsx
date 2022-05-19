@@ -1,6 +1,6 @@
 // bookingWidget.jsx
 import React from 'react';
-import { safeCredentials, handleErrors } from '@utils/fetchHelper';
+import 'react-dates/initialize';
 import { DateRangePicker } from 'react-dates';
 import { safeCredentials, handleErrors } from '@utils/fetchHelper';
 

@@ -12,9 +12,17 @@ const Layout = (props) => {
               <li className="nav-item">
                 <a className="nav-link" href="/">Home</a>
               </li>
+              <li className="nav-item">
+                <a className="nav-link" href="/">Create Property</a>
+              </li>
             </ul>
           </div>
-        </div>
+            <ul className="navbar-nav me-auto">
+              <li className="nav-item">
+                <a className="nav-link" href="/login">Login</a>
+              </li>
+            </ul> 
+        </div>  
       </nav>
       {props.children}
       <footer className="p-3 bg-light">

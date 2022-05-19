@@ -1,7 +1,7 @@
 // property.jsx
 import React from 'react';
-import ReactDOM from 'react-dom';
 import Layout from '@src/layout';
+import BookingWidget from './bookingWidget';
 import { handleErrors } from '@utils/fetchHelper';
 
 import './property.scss';
@@ -14,13 +14,13 @@ class Property extends React.Component {
 
   componentDidMount() {
     fetch(`/api/properties/${this.props.property_id}`)
-    .then(handleErrors)
-    .then(data => {
-      this.setState({
-        property: data.property,
-        loading: false,
+      .then(handleErrors)
+      .then(data => {
+        this.setState({
+          property: data.property,
+          loading: false,
+        })
       })
-    })
   }
 
   render () {
@@ -50,7 +50,7 @@ class Property extends React.Component {
         <div className="property-image mb-3" style={{ backgroundImage: `url(${image_url})` }} />
         <div className="container">
           <div className="row">
-            <div className="info col-12 col-lg-8">
+            <div className="info col-12 col-lg-7">
               <div className="mb-3">
                 <h3 className="mb-0">{title}</h3>
                 <p className="text-uppercase mb-0 text-secondary"><small>{city}</small></p>
@@ -68,12 +68,17 @@ class Property extends React.Component {
               <hr />
               <p>{description}</p>
             </div>
+            <div className="col-12 col-lg-5">
+              <BookingWidget property_id={id} price_per_night={price_per_night} />
+            </div>
           </div>
         </div>
       </Layout>
     )
   }
 }
+
+export default Property
 
 document.addEventListener('DOMContentLoaded', () => {
   const node = document.getElementById('params');

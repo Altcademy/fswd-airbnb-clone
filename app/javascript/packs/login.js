@@ -1,2 +1,2 @@
 // login.js
-import '../src/login/index'
+import '@src/login';
