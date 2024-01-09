@@ -1,10 +1,10 @@
 // bookingWidget.jsx
 import React from 'react';
-import 'react-dates/initialize';
-import { DateRangePicker } from 'react-dates';
+// import 'react-dates/initialize';
+// import { DateRangePicker } from 'react-dates';
 import { safeCredentials, handleErrors } from '@utils/fetchHelper';
 
-import 'react-dates/lib/css/_datepicker.css';
+// import 'react-dates/lib/css/_datepicker.css';
 
 class BookingWidget extends React.Component {
   state = {
@@ -117,7 +117,7 @@ class BookingWidget extends React.Component {
           <h5>${price_per_night} <small>per night</small></h5>
           <hr/>
           <div style={{ marginBottom: focusedInput ? '400px': '2rem' }}>
-            <DateRangePicker
+            {/* <DateRangePicker
               startDate={startDate} // momentPropTypes.momentObj or null,
               startDateId="start_date" // PropTypes.string.isRequired,
               endDate={endDate} // momentPropTypes.momentObj or null,
@@ -127,7 +127,7 @@ class BookingWidget extends React.Component {
               onFocusChange={this.onFocusChange} // PropTypes.func.isRequired,
               isDayBlocked={this.isDayBlocked} // block already booked dates
               numberOfMonths={1}
-            />
+            /> */}
           </div>
           {days && (
             <div className="d-flex justify-content-between">
